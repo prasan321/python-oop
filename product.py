@@ -19,9 +19,31 @@ class Product:
     def value(self,val):
         self._x = val
 
+    #Deleter
+    @value.deleter
+    def value(self):
+        print('value deleted')
+
+    #Getter
+    @property
+    def y(self):
+        return self._y
+    #Setter
+    @y.setter
+    def y(self,val):
+        self._y = val
+
+
+
 p = Product(12,24)
 
 print(p.value)
 print(p.value + 2)
 
+
+print(p.y)
+print(p.y + 2)
+
 print(dir(Product))
+
+del p.value #calling Deleter method
