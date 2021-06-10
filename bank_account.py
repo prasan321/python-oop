@@ -17,11 +17,13 @@ class BankAccount():
     def withdraw(self,amount):
         self.amount = amount
         self.balance = self.balance - self.amount
+        #self.balance -= self.amount
         print('My account balance =', self.balance)
 
     def deposit(self,amount):
         self.amount = amount
         self.balance = self.balance + self.amount
+        #self.balance += self.amount
         print('My account balance =', self.balance)
 
 b = BankAccount()
@@ -33,3 +35,4 @@ b.display()
 b.withdraw(100)
 
 b.deposit(200)
+
