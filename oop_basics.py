@@ -10,12 +10,13 @@ print(type(Animal))
 
 class Person:
     #methods
+    #Prefix all the instance variables with 'self'
     def set_details(self,name,age):
         self.name = name
         self.age = age
 
     def display(self):
-        print('I am', self.name)
+        print('I am', self.name + '\n')
     
     def greet(self):
         if self.age < 80:
@@ -23,6 +24,10 @@ class Person:
         else:
             print('Hello, how do you do?')
         self.display()
+    
+    def old(self):
+        self.age = 80
+        print('I am', self.age)
 
 #create person object
 p1 = Person()
@@ -35,3 +40,6 @@ p2.set_details('Mike', 30)
 #call greet function
 p1.greet()
 p2.greet()
+
+p1.old()
+p2.old()
